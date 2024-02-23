@@ -24,7 +24,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 const Test = require('./models/Test')
 // const Cors=require('cors');
-const cors = require('cors');
+// const cors = require('cors');
 
 // const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
