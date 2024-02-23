@@ -3,7 +3,7 @@ const Student = require("../models/Student");
 const OTP = require("../models/OTP");
 const otpGenerator = require("otp-generator");
 const bcrypt = require("bcrypt");
-const validator = require('validator');
+// const validator = require('validator');
 const { spawn } = require('child_process');
 const jwt = require("jsonwebtoken");
 //sendOTP
