@@ -23,17 +23,20 @@ const multer  = require('multer')
 const path = require('path');
 const { spawn } = require('child_process');
 const Test = require('./models/Test')
-const Cors=require('cors');
+// const Cors=require('cors');
+const cors = require('cors');
 
+// const app = express();
+app.use(cors({ origin: 'http://localhost:3000' }));
 dotenv.config();
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-  );
-  app.use(Cors());
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+//   );
+//   app.use(Cors());
   app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
